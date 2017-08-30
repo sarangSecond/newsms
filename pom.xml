@@ -15,12 +15,35 @@
         <version>1.5.6.RELEASE</version>
     </parent>
 
+    <properties>
+        <cucumber.version>1.2.5</cucumber.version>
+    </properties>
+
     <!-- Add typical dependencies for a web application -->
    <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!-- Cucumber dependencies-->
+       <dependency>
+           <groupId>info.cukes</groupId>
+           <artifactId>cucumber-java8</artifactId>
+           <version>${cucumber.version}</version>
+           <scope>test</scope>
+       </dependency>
+       <dependency>
+           <groupId>info.cukes</groupId>
+           <artifactId>cucumber-junit</artifactId>
+           <version>${cucumber.version}</version>
+           <scope>test</scope>
+       </dependency>
+       <!--<dependency>
+           <groupId>info.cukes</groupId>
+           <artifactId>cucumber-spring</artifactId>
+           <version>${cucumber.version}</version>
+           <scope>test</scope>
+       </dependency>-->
     </dependencies>
 
     <!-- Package as an executable jar -->
